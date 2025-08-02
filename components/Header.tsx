@@ -4,8 +4,8 @@ import { NAV_LINKS } from '../constants';
 const Logo: React.FC = () => (
   <a
     href="#hero"
-    className="flex items-center flex-nowrap select-none whitespace-nowrap overflow-x-auto text-xs sm:text-xl md:text-2xl lg:text-3xl font-medium"
-    style={{ maxWidth: '100vw' }}
+    className="flex items-center flex-nowrap select-none whitespace-nowrap overflow-x-auto font-medium text-[1rem] sm:text-xl md:text-2xl lg:text-3xl"
+    style={{ minWidth: '180px', maxWidth: '100vw' }}
   >
     <span className="text-[#084B8A]">BIG BRIGHT</span>
     <span className="text-[#FFA500] ml-1">Paints</span>
