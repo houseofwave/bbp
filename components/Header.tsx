@@ -17,12 +17,12 @@ const Header: React.FC = () => {
   return (
     <header id="header" className="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-3 items-center h-20">
-          <div className="justify-self-start">{/* Empty div for alignment */}</div>
-          <div className="justify-self-center">
+        <div className="flex items-center justify-between h-20">
+          <div>{/* Empty div for alignment */}</div>
+          <div className="flex-shrink-0 min-w-0">
             <Logo />
           </div>
-          <div className="justify-self-end">
+          <div className="flex-shrink-0">
             <nav className="hidden md:flex space-x-8">
               {NAV_LINKS.map(link => (
                 <a
