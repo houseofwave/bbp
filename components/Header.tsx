@@ -4,8 +4,8 @@ import { NAV_LINKS } from '../constants';
 const Logo: React.FC = () => (
   <a
     href="#hero"
-    className="flex items-center flex-nowrap select-none whitespace-nowrap overflow-x-auto font-medium text-[1rem] sm:text-xl md:text-2xl lg:text-3xl"
-    style={{ minWidth: '180px', maxWidth: '100vw' }}
+    className="flex items-center flex-nowrap select-none whitespace-nowrap font-medium text-[0.85rem] sm:text-xl md:text-2xl lg:text-3xl"
+    style={{ minWidth: '220px', maxWidth: '100vw' }}
   >
     <span className="text-[#084B8A]">BIG BRIGHT</span>
     <span className="text-[#FFA500] ml-1">Paints</span>
@@ -16,7 +16,7 @@ const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header id="header" className="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
+    <header id="header" className="relative bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div>{/* Empty div for alignment */}</div>
@@ -56,7 +56,7 @@ const Header: React.FC = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden">
+        <div className="absolute left-0 w-full bg-white shadow-lg md:hidden z-50">
           <nav className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {NAV_LINKS.map(link => (
               <a
