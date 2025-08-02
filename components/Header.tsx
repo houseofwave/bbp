@@ -1,11 +1,10 @@
-
 import React, { useState } from 'react';
 import { NAV_LINKS } from '../constants';
 
 const Logo: React.FC = () => (
-  <a href="#hero" className="flex items-center select-none">
-    <span className="text-2xl md:text-3xl font-medium text-[#084B8A]">BIG BRIGHT</span>
-    <span className="text-2xl md:text-3xl font-medium text-[#FFA500] ml-2">Paints</span>
+  <a href="#hero" className="flex items-center select-none whitespace-nowrap">
+    <span className="text-xl sm:text-2xl md:text-3xl font-medium text-[#084B8A]">BIG BRIGHT</span>
+    <span className="text-xl sm:text-2xl md:text-3xl font-medium text-[#FFA500] ml-2">Paints</span>
   </a>
 );
 
@@ -16,9 +15,7 @@ const Header: React.FC = () => {
     <header id="header" className="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-3 items-center h-20">
-          <div className="justify-self-start">
-            {/* Empty div for grid alignment */}
-          </div>
+          <div className="justify-self-start">{/* Empty div for alignment */}</div>
           <div className="justify-self-center">
             <Logo />
           </div>
@@ -36,7 +33,11 @@ const Header: React.FC = () => {
               ))}
             </nav>
             <div className="md:hidden">
-              <button onClick={() => setIsOpen(!isOpen)} className="text-gray-700 hover:text-[#084B8A] focus:outline-none select-none">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="text-gray-700 hover:text-[#084B8A] focus:outline-none select-none"
+                aria-label="Toggle menu"
+              >
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   {isOpen ? (
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -49,6 +50,7 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
+
       {isOpen && (
         <div className="md:hidden">
           <nav className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
