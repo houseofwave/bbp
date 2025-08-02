@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import { NAV_LINKS } from '../constants';
 
 const Logo: React.FC = () => (
-  <a href="#hero" className="flex items-center select-none whitespace-nowrap">
-  <span className="text-xl sm:text-2xl md:text-3xl font-medium text-[#084B8A]">BIG BRIGHT</span>
-  <span className="text-xl sm:text-2xl md:text-3xl font-medium text-[#FFA500] ml-1">Paints</span>
-</a>
+  <a
+    href="#hero"
+    className="flex items-center flex-nowrap select-none whitespace-nowrap text-base sm:text-xl md:text-2xl lg:text-3xl font-medium"
+  >
+    <span className="text-[#084B8A]">BIG BRIGHT</span>
+    <span className="text-[#FFA500] ml-1">Paints</span>
+  </a>
 );
-
-
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
